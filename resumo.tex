@@ -1,0 +1,86 @@
+\documentclass[a4,11pt]{pssbmac}
+
+\usepackage[brazil]{babel}      % para texto em Português
+%\usepackage[english]{babel}    % para texto em Inglês
+
+%\usepackage[latin1]{inputenc}   % para acentuação em Português OU
+\usepackage[utf8]{inputenc}   % para acentuação em Português com o uso do Unicode, 
+% mude a codificação desse padrão para utf-8
+
+%%
+%% POR FAVOR, NÃO FAÇA MUDANÇAS NESSE PADRÃO QUE ACARRETEM  EM
+%% ALTERAÇÃO NA FORMATAÇÃO FINAL DO TEXTO
+%%
+\usepackage{float}
+\usepackage{graphics}
+\usepackage{subfigure}
+\usepackage{graphicx}
+\usepackage{epsfig}
+\usepackage[centertags]{amsmath}
+\usepackage{indentfirst}
+\usepackage{amsmath, amsfonts, amssymb, amsthm}
+\usepackage{longtable}
+
+\usepackage[backend=biber, style=abnt]{biblatex}
+\addbibresource{refs.bib}
+
+\begin{document}
+
+%********************************************************
+\title{Instruções para Submissão de Resumos para o CNMAC}
+
+\author{
+    {\large Sandra M. C. Malta}\thanks{autora1@email.}, {\color{red}{\large Sandra M. C. Malta}\thanks{autora2@email.}}\\
+    {\small LNCC, Petrópolis, RJ} \\
+    {\large Mateus Bernardes}\thanks{autor3@email.}  \\
+    {\small DAMAT/UTFPR, Curitiba, PR} \\
+}
+\criartitulo
+
+Este é o padrão (formato {\LaTeX} apenas) para a submissão de trabalhos classificados na Categoria 1 do CNMAC, destinados à divulgação de pesquisas em andamento, com resultados preliminares, ou resultados desenvolvidos em projetos de Iniciação Científica. {\bf Nesta categoria, os trabalhos devem ser submetidos em Inglês ou Português, em forma de resumo de duas páginas no máximo, incluindo-se as referências bibliográficas.} Os trabalhos submetidos que não estiverem de acordo com o formato apresentado por esse padrão serão {\bf rejeitados} pelo Comitê Editorial do evento, sem análise do mérito científico.
+
+Equações inseridas no resumo devem ser enumeradas sequencialmente e à direita no texto, por exemplo
+\begin{equation}
+\frac{\partial u}{\partial t}-\Delta u = f, \quad  \mathrm{em} \; \Omega. \label{Calor}
+\end{equation}
+Consulte o arquivo \verb!.tex! para mais detalhes sobre o código-fonte gerador da equação \eqref{Calor}.
+
+Tendo em vista tratar-se de um resumo, sugere-se evitar a inserção de seções, tabelas e figuras. Caso pertinente, a inserção de tabela deve ser feita com o ambiente \verb!table!, ela deve estar enumerada, disposta horizontalmente centralizada, próxima de sua referência no texto, e a legenda imediatamente acima dela. Por exemplo, consulte a Tabela \ref{tabela01}.
+
+\begin{table}[H]
+\caption{ {\small Categorias dos trabalhos.}}
+\centering
+\begin{tabular}{ccc}
+\hline
+Categoria do trabalho  & Número de páginas & Tipo do trabalho\\ \hline
+1          & 2  & $A$, $B$ e $C$    \\
+2          & entre 5 e 7  & apenas $C$ \\
+\hline
+\end{tabular}\label{tabela01}
+\end{table}
+
+A inserção de figura deve ser feita com o ambiente \verb!figure!, ela deve estar enumerada, disposta horizontalmente centralizada, próxima de sua referência no texto, e legenda imediatamente abaixo dela. Por exemplo, consulte a Figura \ref{figura01}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=.5\textwidth]{ex_fig}
+\caption{ {\small Exemplo de imagem.}}
+\label{figura01}
+\end{figure}
+
+
+{\bf As referências bibliográficas devem ser inseridas usando-se a norma ANBT NBR 6023.} Este {\it template} fornece suporte para a inserção de referências bibliográficas com o pacote \verb+biblatex+, compatível com BibTeX. Os dados de cada referência devem ser adicionados no arquivo \verb+refs.bib+ e a referência no texto com o comando \verb+\cite+. Seguem alguns exemplos de referências: livro \cite{Boldrini}, artigo publicado em periódico \cite{Cuminato}, artigo aceito ainda não publicado \cite{Contiero}, capítulo de livro \cite{daSilva}, dissertação de mestrado \cite{Diniz}, tese de doutorado \cite{Mallet}, livro publicado dentro de uma série \cite{Gomes}, trabalho publicado em anais de eventos \cite{Santos}, {\it website} e outros \cite{CNMAC}. Sempre que adequado, forneça o DOI, ISBN ou ISSN conforme o caso.
+
+Os trabalhos aceitos e apresentados serão publicados no {\it Proceeding Series of the Brazilian Society of Computational and Applied Mathematics} \footnote{http://proceedings.sbmac.org.br/sbmac}. Por esta razão, ao submeter e apresentar um trabalho, fica o autor ciente que o mesmo será publicado pela SBMAC, sendo tacitamente cedidos os direitos autorais à Sociedade. Consulte o site oficial\footnote{http://www.cnmac.org.br} do CNMAC para mais informações sobre requisitos para publicação.
+
+\section*{Agradecimentos (opcional)}
+Seção reservada aos agradecimentos dos autores, caso pertinente. 
+
+% refs bibliograficas
+\printbibliography
+
+\end{document}
+
+
+
+
