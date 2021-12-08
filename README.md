@@ -37,7 +37,7 @@ Os demais arquivos são auxiliares:
 
 ## Créditos
 
-Elaborado por SBMAC - Sociedade de Matemática Aplicada e Computacional (https://www.sbmac.org.br/).
+Elaborado para SBMAC - Sociedade de Matemática Aplicada e Computacional (https://www.sbmac.org.br/).
 
 ## Licença
 
