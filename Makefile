@@ -1,6 +1,6 @@
 all:
 	pdflatex resumo
-	biber resumo
+	bibtex resumo
 	pdflatex resumo
 	pdflatex resumo
 

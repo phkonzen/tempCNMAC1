@@ -8,27 +8,6 @@
 \setlength{\oddsidemargin}{1.65cm}
 \setlength{\evensidemargin}{1.65cm}
 
-\usepackage{amsthm}
-
-%%%%%%
-% REMOVER ATES DA PUB
-\usepackage{ulem}
-\usepackage{xcolor}
-%%%%%%%%
-
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{lemma}{Lemma}[section]
-\newtheorem{proposition}{Proposition}[section]
-\newtheorem{definition}{Definition}[section]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{corollary}{Corollary}[section]
-\newtheorem{teorema}{Teorema}[section]
-\newtheorem{lema}{Lema}[section]
-\newtheorem{prop}{Proposi\c{c}\~ao}[section]
-\newtheorem{defi}{Defini\c{c}\~ao}[section]
-\newtheorem{obs}{Observa\c{c}\~ao}[section]
-\newtheorem{cor}{Corol\'ario}[section]
-
 \renewenvironment{abstract}
 {\begin{list}{}{%
   \setlength{\rightmargin}{0.5cm}
@@ -44,7 +23,7 @@
 %HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
      {\normalsize {\bf Proceeding Series of the Brazilian
 Society of Computational and Applied Mathematics}}\\
-    \vspace{-0.5em}{\color{red}\normalsize\bf Preprint}\\
+    \vspace{-0.5em}{\normalsize Preprint}\\
 %HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
      \rule{\textwidth}{0.6pt} 
    \end{minipage}

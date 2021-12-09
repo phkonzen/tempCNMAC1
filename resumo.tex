@@ -1,32 +1,71 @@
-\documentclass[a4,11pt]{pssbmac}
+\documentclass{pssbmac}
 
-\usepackage[brazil]{babel}      % para texto em Português
-%\usepackage[english]{babel}    % para texto em Inglês
+% remover antes de pub
+\usepackage{ulem}
+\usepackage{color}
 
-%\usepackage[latin1]{inputenc}   % para acentuação em Português OU
-\usepackage[utf8]{inputenc}   % para acentuação em Português com o uso do Unicode, 
-% mude a codificação desse padrão para utf-8
-
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% POR FAVOR, NÃO FAÇA MUDANÇAS NESSE PADRÃO QUE ACARRETEM  EM
 %% ALTERAÇÃO NA FORMATAÇÃO FINAL DO TEXTO
-%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% POR FAVOR, ESCOLHA CONFORME O CASO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[brazil]{babel} % texto em Português
+%\usepackage[english]{babel} % texto em Inglês
+
+%\usepackage[latin1]{inputenc} % acentuação em Português ISO-8859-1
+\usepackage[utf8]{inputenc} % acentuação em Português UTF-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% POR FAVOR, NÃO ALTERAR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[T1]{fontenc}
 \usepackage{float}
 \usepackage{graphics}
-\usepackage{subfigure}
 \usepackage{graphicx}
 \usepackage{epsfig}
-\usepackage[centertags]{amsmath}
 \usepackage{indentfirst}
 \usepackage{amsmath, amsfonts, amssymb, amsthm}
-\usepackage{longtable}
+\usepackage{url}
+% Ambientes pré-definidos
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{definition}{Definition}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{corollary}{Corollary}[section]
+\newtheorem{teorema}{Teorema}[section]
+\newtheorem{lema}{Lema}[section]
+\newtheorem{prop}{Proposi\c{c}\~ao}[section]
+\newtheorem{defi}{Defini\c{c}\~ao}[section]
+\newtheorem{obs}{Observa\c{c}\~ao}[section]
+\newtheorem{cor}{Corol\'ario}[section]
 
-\usepackage[backend=biber, style=abnt]{biblatex}
+% ref bibliográficas
+
+% BibTeX
+%\usepackage[abnt-emphasize=bf]{abntex2cite}
+
+% BibLaTeX
+% \usepackage[backend=biber, style=abnt]{biblatex}
+\usepackage[backend=biber]{biblatex}
+
 \addbibresource{refs.bib}
+\DeclareTextFontCommand{\emph}{\boldmath\bfseries}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hyphenation{}
 
 \begin{document}
 
-%********************************************************
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TÍTULO E AUTORAS(ES)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \title{Instruções para Submissão de Resumos para o CNMAC}
 
 \author{
@@ -36,8 +75,14 @@
     {\small DAMAT/UTFPR, Curitiba, PR} \\
 }
 \criartitulo
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Este é o padrão (formato {\LaTeX} apenas) para a submissão de trabalhos classificados na Categoria 1 do CNMAC, destinados à divulgação de pesquisas em andamento, com resultados preliminares, ou resultados desenvolvidos em projetos de Iniciação Científica. {\bf Nesta categoria, os trabalhos devem ser submetidos em Inglês ou Português, em forma de resumo de duas páginas no máximo, incluindo-se as referências bibliográficas.} Os trabalhos submetidos que não estiverem de acordo com o formato apresentado por esse padrão serão {\bf rejeitados} pelo Comitê Editorial do evento, sem análise do mérito científico.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% TEXTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Este é o padrão (formato \LaTeX{} apenas) para a submissão de trabalhos classificados na Categoria 1 do CNMAC, destinados à divulgação de pesquisas em andamento, com resultados preliminares, ou resultados desenvolvidos em projetos de Iniciação Científica. \emph{Nesta categoria, os trabalhos devem ser submetidos em Inglês ou Português, em forma de resumo de duas páginas no máximo, incluindo-se as referências bibliográficas.} Os trabalhos submetidos que não estiverem de acordo com o formato apresentado por esse padrão serão {\bf rejeitados} pelo Comitê Editorial do evento, sem análise do mérito científico.
 
 Equações inseridas no resumo devem ser enumeradas sequencialmente e à direita no texto, por exemplo
 \begin{equation}
@@ -45,7 +90,7 @@ Equações inseridas no resumo devem ser enumeradas sequencialmente e à direita
 \end{equation}
 Consulte o arquivo \verb!.tex! para mais detalhes sobre o código-fonte gerador da equação \eqref{Calor}.
 
-Tendo em vista tratar-se de um resumo, sugere-se evitar a inserção de seções, tabelas e figuras. Caso pertinente, a inserção de tabela deve ser feita com o ambiente \verb!table!, ela deve estar enumerada, disposta horizontalmente centralizada, próxima de sua referência no texto, e a legenda imediatamente acima dela. Por exemplo, consulte a Tabela \ref{tabela01}.
+Tendo em vista tratar-se de um resumo, sugere-se evitar a inserção de seções, tabelas e figuras. Caso necessária, a inserção de tabela deve ser feita com o ambiente \verb!table!, ela deve estar enumerada, disposta horizontalmente centralizada, próxima de sua referência no texto, e a legenda imediatamente acima dela. Por exemplo, consulte a Tabela \ref{tabela01}.
 
 \begin{table}[H]
 \caption{ {\small Categorias dos trabalhos.}}
@@ -69,15 +114,20 @@ A inserção de figura deve ser feita com o ambiente \verb!figure!, ela deve est
 \end{figure}
 
 
-{\bf As referências bibliográficas devem ser inseridas usando-se a norma ANBT NBR 6023.} Este {\it template} fornece suporte para a inserção de referências bibliográficas com o pacote \verb+biblatex+, compatível com BibTeX. Os dados de cada referência devem ser adicionados no arquivo \verb+refs.bib+ e a referência no texto com o comando \verb+\cite+. Seguem alguns exemplos de referências: livro \cite{Boldrini}, artigo publicado em periódico \cite{Cuminato}, artigo aceito ainda não publicado \cite{Contiero}, capítulo de livro \cite{daSilva}, dissertação de mestrado \cite{Diniz}, tese de doutorado \cite{Mallet}, livro publicado dentro de uma série \cite{Gomes}, trabalho publicado em anais de eventos \cite{Santos}, {\it website} e outros \cite{CNMAC}. Sempre que adequado, forneça o DOI, ISBN ou ISSN conforme o caso.
+{\bf As referências bibliográficas devem ser inseridas usando-se a norma ABNT NBR 6023.} Este {\it template} fornece suporte para a inserção de referências bibliográficas com o Bib\TeX{}. Os dados de cada referência devem ser adicionados no arquivo \verb+refs.bib+ e a referência no texto com o comando \verb+\cite+. Seguem alguns exemplos de referências: livro \cite{Boldrini}, artigos publicados em periódicos \cite{Contiero,Cuminato}, capítulo de livro \cite{daSilva}, dissertação de mestrado \cite{Diniz}, tese de doutorado \cite{Mallet}, livro publicado dentro de uma série \cite{Gomes}, trabalho publicado em anais de eventos \cite{Santos}, {\it website} e outros \cite{CNMAC}. Sempre que disponível, forneça o DOI ou ISBN conforme o caso.
 
-Os trabalhos aceitos e apresentados serão publicados no {\it Proceeding Series of the Brazilian Society of Computational and Applied Mathematics} \footnote{http://proceedings.sbmac.org.br/sbmac}. Por esta razão, ao submeter e apresentar um trabalho, fica o autor ciente que o mesmo será publicado pela SBMAC, sendo tacitamente cedidos os direitos autorais à Sociedade. Consulte o site oficial\footnote{http://www.cnmac.org.br} do CNMAC para mais informações sobre requisitos para publicação.
+% Os trabalhos aceitos e apresentados serão publicados no {\it Proceeding Series of the Brazilian Society of Computational and Applied Mathematics} \footnote{http://proceedings.sbmac.org.br/sbmac}. Por esta razão, ao submeter e apresentar um trabalho, fica o autor ciente que o mesmo será publicado pela SBMAC, sendo tacitamente cedidos os direitos autorais à Sociedade. Consulte o site oficial\footnote{http://www.cnmac.org.br} do CNMAC para mais informações sobre requisitos para publicação.
 
 \section*{Agradecimentos (opcional)}
 Seção reservada aos agradecimentos dos autores, caso pertinente. 
 
-% refs bibliograficas
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% REFS BIBLIOGRÁFICAS
+% POR FAVOR, NÃO ALTERAR
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \printbibliography
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
 
