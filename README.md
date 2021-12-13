@@ -5,7 +5,7 @@ Padrão LaTeX para submissão de trabalho/resumo na categoria 1 do CNMAC.
 ## Como compilar
 
 	pdflatex resumo
-	biber resumo
+	bibtex resumo
 	pdflatex resumo
 	pdflatex resumo
 
@@ -38,9 +38,3 @@ Os demais arquivos são auxiliares:
 ## Créditos
 
 Elaborado para SBMAC - Sociedade de Matemática Aplicada e Computacional (https://www.sbmac.org.br/).
-
-## Licença
-
-Este trabalho está licenciado sob a Licença Creative Commons Atribuição-CompartilhaIgual 4.0 Internacional. Para ver uma cópia desta licença, visite http://creativecommons.org/licenses/by-sa/4.0/ ou envie uma carta para Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
-
-
