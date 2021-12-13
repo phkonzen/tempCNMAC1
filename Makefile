@@ -10,4 +10,5 @@ clean:
 	rm -f resumo.bcf
 	rm -f resumo.blg
 	rm -f resumo.log
+	rm -f resumo.run.xml
 	rm -f resumo-blx.bib
