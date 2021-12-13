@@ -35,6 +35,8 @@ Os demais arquivos são auxiliares:
 
 - `Makefile`: Makefile para geração do arquivo em terminal Linux ou compatível.
 
+- `.gitignore`: arquivo de configuração do Git.
+
 ## Créditos
 
 Elaborado para SBMAC - Sociedade de Matemática Aplicada e Computacional (https://www.sbmac.org.br/).
